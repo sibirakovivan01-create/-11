@@ -1,0 +1,56 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+body { display: flex; flex-direction: column; min-height: 100vh; background: #f9f9f9; }
+main { flex: 1; padding: 20px; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+/* Шапка */
+header { background: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; gap: 10px; }
+.logo { font-size: 24px; font-weight: bold; color: #e91e63; }
+nav a { text-decoration: none; color: #333; margin-left: 15px; font-weight: 500; }
+nav a:hover { color: #e91e63; }
+.btn-primary, .btn-large { background: #e91e63; color: white !important; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; }
+.btn-large { font-size: 18px; padding: 15px 30px; margin-top: 20px; width: 100%; max-width: 300px;}
+
+/* Герой-секция */
+.hero { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #fce4ec, #f8bbd0); border-radius: 10px; margin-bottom: 30px; }
+.hero h1 { font-size: 28px; margin-bottom: 15px; color: #880e4f; }
+
+/* Преимущества */
+.adv-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+.adv-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+/* Услуги */
+.services-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; margin-bottom: 30px; }
+.service-card { background: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #e91e63; }
+
+/* Калькулятор */
+.calculator { background: #fff; padding: 20px; border-radius: 8px; margin-top: 20px; }
+.calculator label { display: block; margin-bottom: 10px; font-weight: bold; }
+.calculator select, .calculator input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+.calculator h3 { margin-top: 15px; color: #e91e63; }
+
+/* Форма */
+.form-container { max-width: 500px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.checkbox { display: flex; align-items: center; gap: 10px; }
+.checkbox input { width: auto; }
+.error { color: red; font-size: 12px; display: block; margin-top: 5px; }
+
+/* Подвал */
+footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: auto; font-size: 14px; }
+
+/* Адаптив под планшеты и ПК */
+@media (min-width: 768px) {
+    .adv-grid { grid-template-columns: repeat(3, 1fr); }
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero h1 { font-size: 36px; }
+}
+
+/* Требование ДЭ: разрешение 360x800 (мобильные) */
+@media (max-width: 360px) {
+    header { flex-direction: column; align-items: flex-start; }
+    nav { display: flex; flex-direction: column; width: 100%; gap: 10px; margin-top: 10px; }
+    nav a { margin: 0; padding: 10px 0; border-bottom: 1px solid #eee; }
+    .btn-large { width: 100%; max-width: none; }
+}

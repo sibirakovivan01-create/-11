@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | Грация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Грация</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="signup.html" class="btn-primary">Записаться</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-list">
+            <h2>Популярные услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Групповые занятия</h3>
+                    <p>Стоимость: от 500 ₽ / занятие</p>
+                    <p>Йога, пилатес, танцы, аэробика.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Мини-группы (2-3 чел.)</h3>
+                    <p>Стоимость: от 1000 ₽ / занятие</p>
+                    <p>Индивидуальный подход в небольшом коллективе.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Персональный тренинг</h3>
+                    <p>Стоимость: от 2000 ₽ / занятие</p>
+                    <p>Максимальный результат с личным тренером.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <h2>Калькулятор абонемента на месяц</h2>
+            <form id="calcForm">
+                <label>Выберите услугу:
+                    <select id="calcService">
+                        <option value="500">Групповые занятия (Выгодный)</option>
+                        <option value="1000">Занятия в мини группах (Комфортный)</option>
+                        <option value="2000">Индивидуальные занятия (Усиленный)</option>
+                    </select>
+                </label>
+                <label>Количество занятий:
+                    <input type="number" id="calcCount" value="8" min="1" max="31">
+                </label>
+                <h3>Итого: <span id="calcResult">4000</span> ₽</h3>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакты: г. Москва, ул. Спортивная, д. 10 | Телефон: +7 (999) 123-45-67 | Email: info@grace-fit.ru</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

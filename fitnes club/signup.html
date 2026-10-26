@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на пробное занятие | Грация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Грация</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h2>Запись на пробное занятие</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label>ФИО (только кириллица и пробелы):</label>
+                <input type="text" id="fullname" required>
+                <span class="error" id="err-fullname"></span>
+            </div>
+            <div class="form-group">
+                <label>Телефон:</label>
+                <input type="text" id="phone" placeholder="+7(999)-123-45-67" required>
+                <span class="error" id="err-phone"></span>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" required>
+                <span class="error" id="err-email"></span>
+            </div>
+            <div class="form-group">
+                <label>Услуга:</label>
+                <select id="service" required>
+                    <option value="">-- Выберите услугу --</option>
+                    <option value="1">Групповые занятия</option>
+                    <option value="2">Мини-группы</option>
+                    <option value="3">Персональный тренинг</option>
+                </select>
+                <span class="error" id="err-service"></span>
+            </div>
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" id="policy" required>
+                    Я согласен с политикой клуба
+                </label>
+                <span class="error" id="err-policy"></span>
+            </div>
+            <button type="submit" class="btn-large">Записаться</button>
+        </form>
+        <div id="successMessage" style="display:none; color: green; margin-top: 15px;"></div>
+    </main>
+
+    <footer>
+        <p>Контакты: г. Москва, ул. Спортивная, д. 10 | Телефон: +7 (999) 123-45-67 | Email: info@grace-fit.ru</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
